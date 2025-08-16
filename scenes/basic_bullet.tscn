@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy3riebl71mij"]
+
+[ext_resource type="Script" uid="uid://cgxyx0p3i76wa" path="res://src/basic_bullet.gd" id="1_hc5j7"]
+
+[sub_resource type="Gradient" id="Gradient_wnpdp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hc5j7"]
+gradient = SubResource("Gradient_wnpdp")
+width = 8
+height = 32
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_hc5j7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-8, -32, -8, 32, 8, 32, 8, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_hc5j7")
