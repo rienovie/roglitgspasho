@@ -1,18 +1,21 @@
 extends CharacterBody2D
 class_name class_Player
 
+# Movement
 @export var speed: float = 50000.0
 @export var speedMultiplier: float = 1.0
 var direction = Vector2.ZERO
 
+# Firing
+@export var fireRate: float = 0.25
+var shooting: bool = false
+var timeSinceLastShot: float = 0.0
 
+# Misc
 var maxScreenX: int = 32
 var maxScreenY: int = 32
 
-var shooting: bool = false
-var fireRate: float = 0.5
-var timeSinceLastShot: float = 0.0
-
+# TODO: make this movement feel better
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("move_up"):
 		if direction.y > -1:
@@ -44,7 +47,7 @@ func _input(event: InputEvent) -> void:
 		shooting = false
 
 func shoot() -> void:
-	var newBullet = G.bullet.instantiate()
+	var newBullet = G.BM.bullet.instantiate()
 	newBullet.position = position + Vector2(0,-100)
 	G.rootNode.add_child(newBullet)
 

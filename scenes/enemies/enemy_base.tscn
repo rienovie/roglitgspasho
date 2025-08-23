@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4wy42k0gjrt0"]
+
+[ext_resource type="Script" uid="uid://o5keo7boo4jo" path="res://src/Spawnables/enemy_ base.gd" id="1_qty17"]
+
+[node name="EnemyBase" type="Node2D"]
+script = ExtResource("1_qty17")

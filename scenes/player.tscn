@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1q0y6wgmuibq"]
 
 [ext_resource type="Texture2D" uid="uid://cm2fpht45pq3r" path="res://library/temp/ship.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://bj8m7otij5s4d" path="res://src/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bj8m7otij5s4d" path="res://src/Spawnables/player.gd" id="1_g2els"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(0.25, 0.25)

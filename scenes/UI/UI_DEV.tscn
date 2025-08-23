@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwn7eppdmp3w"]
+
+[ext_resource type="Script" uid="uid://ch28etwoanu67" path="res://src/UI/UI_DEV.gd" id="1_fo5y8"]
+
+[node name="UiDev" type="Control" node_paths=PackedStringArray("mainPanel", "mainPanelButton", "spawnPlayerButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fo5y8")
+mainPanel = NodePath("MarginContainer/root_hbx/main_Pnl")
+mainPanelButton = NodePath("MarginContainer/root_hbx/mainToggle_Btn")
+spawnPlayerButton = NodePath("MarginContainer/root_hbx/main_Pnl/MarginContainer/mp_vbx/SpwnPlayr_Btn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 110.0
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="root_hbx" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="main_Pnl" type="PanelContainer" parent="MarginContainer/root_hbx"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/root_hbx/main_Pnl"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="mp_vbx" type="VBoxContainer" parent="MarginContainer/root_hbx/main_Pnl/MarginContainer"]
+layout_mode = 2
+
+[node name="SpwnPlayr_Btn" type="Button" parent="MarginContainer/root_hbx/main_Pnl/MarginContainer/mp_vbx"]
+layout_mode = 2
+focus_mode = 0
+text = "Spawn Player"
+
+[node name="mainToggle_Btn" type="Button" parent="MarginContainer/root_hbx"]
+layout_mode = 2
+size_flags_vertical = 0
+focus_mode = 0
+text = "DEV"

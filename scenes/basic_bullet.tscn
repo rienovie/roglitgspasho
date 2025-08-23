@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy3riebl71mij"]
 
-[ext_resource type="Script" uid="uid://cgxyx0p3i76wa" path="res://src/basic_bullet.gd" id="1_hc5j7"]
+[ext_resource type="Script" uid="uid://di3svbs64elc0" path="res://src/Spawnables/basic_bullet.gd" id="1_hc5j7"]
 
 [sub_resource type="Gradient" id="Gradient_wnpdp"]
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b114m67wxtr0d"]
+
+[ext_resource type="Script" uid="uid://u4u42ykt51m5" path="res://src/Spawnables/enemy_ base.gd" id="1_2eva7"]
+[ext_resource type="Texture2D" uid="uid://bfekg8ex54cee" path="res://library/temp/enemy_bx.png" id="2_vwiuc"]
+
+[node name="EnemyBx" type="Node2D"]
+script = ExtResource("1_2eva7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vwiuc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-57, -56.1, -57, -54.6, -63.1, -53, -66.2, -53, -65, -39.8, -65, -18.7, -66.1, -17, -69, -17, -66, -9.6, -66, -5.2, -72.8, 51, -75, 51, -72, 58.4, -72, 61.3, -44.8, 58, -27.2, 58, 35, 63.8, 35, 65.1, 67.1, 64, 75.1, 64, 77.1, 61, 78.8, 61, 84.8, -6, 86.4, -6, 85, -13.4, 85, -40.4, 80, -52.4, 80, -55.1, 33.9, -53, 19.1, -53)
